@@ -14,3 +14,5 @@ Object.freeze(samePerson)
 Object.freeze(samePerson.name)
 Object.freeze(samePerson.age)
 Object.freeze(samePerson.country)
+person.age = 78
+person.country = 'FR'
