@@ -7,3 +7,5 @@ const obj = { str, num, bool, undef: undefined }
 
 const nested = {  arr : [4, undefined, '2'], obj: {  str, num, bool } }
 Object.freeze(nested)
+Object.freeze(nested.arr)
+Object.freeze(nested.obj)
