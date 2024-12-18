@@ -1,2 +1,2 @@
-const smmalls = Math.min
-const biggie = Math.max
+const smmalls = Number.MIN_VALUE
+const biggie = Number.MAX_VALUE
