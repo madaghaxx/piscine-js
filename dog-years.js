@@ -13,7 +13,7 @@ const obj = {
 const dogYears = (name, age) => {
 
     let res = 0
-    res = (obj[name] * age) / 31557600 * 7;
+    res = (age * 7 )/ (31557600 * obj[name]);
     res = Math.round(res * 100) / 100
     return res;
 }
