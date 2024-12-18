@@ -14,8 +14,8 @@ const dogYears = (naame, age) => {
 
     let res = 0
 
-    res = (obj[naame] * age * 7) / 31557600;
+    res = (obj[naame] * age * 7) / 60 / 60 / 24 / 365.25;
     res = Math.round(res * 100) / 100
     return res;
 }
-console.log(dogYears('mercury', 2134835688))
+// console.log(dogYears('mercury', 2134835688))
