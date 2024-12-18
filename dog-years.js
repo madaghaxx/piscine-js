@@ -18,4 +18,4 @@ const dogYears = (naame, age) => {
     res = Math.round(res * 100) / 100
     return res;
 }
-console.log(dogYears('earth', 1000000000))
+console.log(dogYears('mercury', 2134835688))
