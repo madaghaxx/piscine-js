@@ -10,10 +10,10 @@ const obj = {
 }
 
 
-const dogYears = (naame, age) => {
+const dogYears = (name, age) => {
 
     let res = 0
-    res = obj[naame] * age * 7 / 60 / 60 / 24 / 365.25;
+    res = (obj[name] * age) / 31557600 * 7;
     res = Math.round(res * 100) / 100
     return res;
 }
