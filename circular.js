@@ -3,4 +3,4 @@ const circular = {
 }
 circular.circular = circular
 
-console.log(circular);
+// console.log(circular);
