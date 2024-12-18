@@ -9,4 +9,8 @@ const clone2 = {
     country: 'US',
 }
   
-const samePerson=person
+const samePerson = person
+Object.freeze(samePerson)
+Object.freeze(samePerson.name)
+Object.freeze(samePerson.age)
+Object.freeze(samePerson.country)
