@@ -1,2 +1,2 @@
-const get = (x) => sourceObjet.x;
+const get = (x) => sourceObject.x;
 const set = (x, y) => sourceObject.x = y;
