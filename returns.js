@@ -1,2 +1,4 @@
 const id = (x) => x;
-const getLenth = (x) => x.length;
+const getLength = (x) => x.length;
+
+// console.log(getLenth([2,42]))
