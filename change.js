@@ -1,2 +1,3 @@
-const get = (x) => sourceObject.x;
-const set = (x, y) => sourceObject.x = y;
+
+const get = (x) => sourceObject[x];
+const set = (z, y) => sourceObject[z] = y;
