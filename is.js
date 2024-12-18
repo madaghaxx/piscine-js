@@ -10,7 +10,7 @@ is.arr = (arr) => Array.isArray(arr) ? true : false
 
 
 
-is.obj = (obj) => typeof (obj) == "object" ? true : false
+is.obj = (obj) => typeof (obj) == "object" && !Array.isArray(obj) && !(typeof (obj) == null) ? true : false
 
 
 
