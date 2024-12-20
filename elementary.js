@@ -1,22 +1,60 @@
 let multiply = (a, b) => {
-    let res = 0;
-    if (a < 0 && b < 0) { a = -a; b = -b; }
-    else if (a < 0) { a = -a; b = -b; }
-    else if (b < 0) { a = -a; b = -b; }
-    for (let i = 0; i < b; i++) { res += a; } return res;
+    let aa = a
+    let bb = b
+    let res = 0
+    if (a < 0) {
+        a = -a
+    }
+    if (b < 0) {
+        b = -b
+    }
+    for (let i = 0; i < b; i++) {
+        res += a
+    }
+    if ((aa < 0 && bb > 0) || (aa > 0 && bb < 0)) {
+        res = -res
+    }
+    return res
 }
-// console.log(multiply(123, -22))
 
 
-let divide = (a, b) => {
-    let res = 0;
-    if (a < 0 && b < 0) { a = -a; b = -b; }
-    else if (a < 0) { a = -a; b = -b; }
-    else if (b < 0) { a = -a; b = -b; }
-    while (a >= b) { a -= b; res++; } return res;
+let diivde = (a, b) => {
+    let aa = a
+    let bb = b
+    let res = 0
+    if (a < 0) {
+        a = -a
+    }
+    if (b < 0) {
+        b = -b
+    }
+    while (a >= b) {
+        a -= b
+        res++
+    }
+    if ((aa < 0 && bb > 0) || (aa > 0 && bb < 0)) {
+        res = -res
+    }
+    return res
 }
-// console.log(divide(10, 3)) // 3
 
-
-let modulo = (a, b) => { while (a >= b) { a -= b; } return a; }
+let modulo = (a, b) => {
+    let aa = a
+    let bb = b
+    let res = 0
+    if (a < 0) {
+        a = -a
+    }
+    if (b < 0) {
+        b = -b
+    }
+    while (a >= b) {
+        a -= b
+        res++
+    }
+    if ((aa < 0 && bb > 0) || (aa > 0 && bb < 0)) {
+        a = -a
+    }
+    return a
+}
 // console.log(modulo(10, 3)) // 1
