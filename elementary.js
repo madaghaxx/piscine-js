@@ -39,9 +39,9 @@ let divide = (a, b) => {
 }
 
 let modulo = (a, b) => {
-    let aa = a
-    let bb = b
-    let res = 0
+    let aa = a;
+    let bb = b;
+    let res = 0;
     if (a < 0) {
         a = -a
     }
@@ -58,3 +58,4 @@ let modulo = (a, b) => {
     return a
 }
 // console.log(modulo(-123, -22)) 
+// modulo(-123, -22)
