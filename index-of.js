@@ -2,7 +2,7 @@ let indexOf = (str, toFind, int) => {
     let res = -1
     let j = 0
     int ? j = int : j = 0
-    for (i = j; i < str.length; i++) {
+    for (let i = j; i < str.length; i++) {
         if (str[i] === toFind) {
             res = i
             break
@@ -15,11 +15,11 @@ let indexOf = (str, toFind, int) => {
 
 let lastIndexOf = (str, toFind, int) => {
     let res = -1
-    let j = 0
-    int ? j = int : j = 0
-    for (let i = str.length - 1; i >= 0; i--) {
-        if (str[i] === toFind) {
-            res = i
+    let j = str.length - 1
+    int ? j = int : j = str.length - 1
+    for (j; j>=0; j--) {
+        if (str[j] === toFind) {
+            res = j
             break
         } else {
             res = -1
@@ -27,7 +27,7 @@ let lastIndexOf = (str, toFind, int) => {
     }
     return res
 }
-let inclueds = (str, toFind) => {
+let includes = (str, toFind) => {
     let res = false
     for (let i = 0; i < str.length; i++) {
         if (str[i] === toFind) {
@@ -39,5 +39,5 @@ let inclueds = (str, toFind) => {
     }
     return res
 }
-
-console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2));
+// let t
+// console.log(lastIndexOf([t, 0, 0, t], t, 2));
