@@ -1,7 +1,7 @@
 let trunc = (num) => {
     let i = 0
     let hehe = 0
-    let mm = 1000000
+    let mm = 1e6
     let sign = 1
     if (num < 0) {
         sign = -1
@@ -46,7 +46,7 @@ let round = (num) => {
         return floor(num)
     }
 
-return trunc(num)
+    return trunc(num)
 }
 
 // const nums = [3.7, -3.7, 3.1, -3.1]
