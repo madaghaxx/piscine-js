@@ -8,7 +8,13 @@ let multiply = (a, b) => {
 // console.log(multiply(123, -22))
 
 
-let divide = (a, b) => { let res = 0; while (a >= b) { a -= b; res++; } return res; }
+let divide = (a, b) => {
+    let res = 0;
+    if (a < 0 && b < 0) { a = -a; b = -b; }
+    else if (a < 0) { a = -a; b = -b; }
+    else if (b < 0) { a = -a; b = -b; }
+    while (a >= b) { a -= b; res++; } return res;
+}
 // console.log(divide(10, 3)) // 3
 
 
