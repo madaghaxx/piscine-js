@@ -18,7 +18,7 @@ let multiply = (a, b) => {
 }
 
 
-let diivde = (a, b) => {
+let divide = (a, b) => {
     let aa = a
     let bb = b
     let res = 0
@@ -57,4 +57,4 @@ let modulo = (a, b) => {
     }
     return a
 }
-// console.log(modulo(10, 3)) // 1
+// console.log(divide(34, 78) === 0) 
