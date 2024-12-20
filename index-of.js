@@ -4,6 +4,8 @@ let indexOf = (str, toFind) => {
         if (str[i] === toFind) {
             res = i
             break
+        } else {
+            res = -1
         }
     }
     return res
@@ -15,6 +17,8 @@ let lastIndexOf = (str, toFind) => {
         if (str[i] === toFind) {
             res = i
             break
+        } else {
+            res = -1
         }
     }
     return res
@@ -25,6 +29,8 @@ let inclueds = (str, toFind) => {
         if (str[i] === toFind) {
             res = true
             break
+        } else {
+            res = false
         }
     }
     return res
