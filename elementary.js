@@ -52,9 +52,9 @@ let modulo = (a, b) => {
         a -= b
         res++
     }
-    // if ((aa < 0 && bb > 0) || (aa > 0 && bb < 0)) {
-    //     a = -a
-    // }
+    if ((aa < 0 && bb > 0)) {
+        a = -a
+    }
     return a
 }
 console.log(modulo(123, -22)) 
