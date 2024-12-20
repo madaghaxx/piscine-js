@@ -1,7 +1,8 @@
-let i = 0
-let res = ""
 let repeat = (str, num) => {
-    for (i = 0; i < num; i++) {
+    let res = ""
+    for (let i = 0; i < num; i++) {
         res += str
     }
+    return res
 }
+// console.log(repeat("abc", 3)) // abcabcabc
