@@ -1,9 +1,9 @@
 let letterSpaceNumber = (str) => {
     let res = [];
-    const check = /[a-z]{1}+\s + [0 - 9]{1}/g;
+    const check = /\w\s\d\b/g;
     let match = str.match(check);
     if (match) {
-        res.push(match);
+        res = res.concat(match);
     }
     return res;
 }
