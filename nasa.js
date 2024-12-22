@@ -2,15 +2,32 @@ let nasa = (N) => {
     let res = ""
     for (let i = 1; i <= N; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            res += "NASA";
+            if (i === N) {
+                res += "NASA";
+            } else {
+                res += "NASA ";
+            }
         } else if (i % 3 === 0) {
-            res += "NA ";
+            if (i === N) {
+                res += "NA";
+            } else {
+                res += "NA ";
+            }
         } else if (i % 5 === 0) {
-            res += "SA ";
+            if (i === N) {
+                res += "SA";
+            } else {
+                res += "SA ";
+            }
         } else {
-            res += i + " ";
+            if (i === N) {
+                res += i;
+            }
+            else {
+                res += i + " ";
+            }
         }
     }
     return res;
 }
-// console.log(nasa(100));
+// console.log(nasa(60));
