@@ -1,18 +1,24 @@
 let pyramid = (a, n) => {
     let res = "";
-    for (let i = 0; i < n; i++) {
-        // console.log(;
-        for (let j = 0; j < n - (i * a.Length); j++) {
-            res += " ";
+    for (let i = 1; i <= n; i++) {
+        for (let j = i; j < n; j++) {
+            for (let p = 1; p <= a.length; p++) {
+                res += " "
+            }
         }
-        for (let j = 0; j < 2 * i + 1; j++) {
-            res += a;
+        for (let j = 1; j <= i; j++) {
+            res += a
+                ;
         }
-        if (i !== n - 1) {
+        for (let j = 1; j < i; j++) {
+            res += a
+        }
+
+        if (i !== n) {
             res += "\n";
         }
     }
     return res;
 }
-// console.logpyramidpyramidpyramid);
-console.log(pyramid('{}', 12));
+// console.log(pyramid);
+// console.log(pyramid('*', 12));
