@@ -1,4 +1,4 @@
-chuncky = (arr, size) => {
+let chuncky = (arr, size) => {
     let result = [];
     let chunk = [];
     for (let i = 0; i < arr.length; i++) {
