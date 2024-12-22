@@ -4,7 +4,13 @@ let flat = (a, depth) => {
     // console.log(depth)
     for (let i = 0; i < a.length; i++) {
         if (Array.isArray(a[i]) && depth > 0) {
-            res = res.concat(flat(a[i], depth - 1));
+            for (let j = 0; j < a[i].length; j++) {
+                if (Array.isArray(a[i][j])) {
+                    res.push(flat(a[i][j], depth - 1))
+                } else {
+                    res.push(a[i][j])
+                }
+            }
         } else {
             res.push(a[i]);
         }
@@ -14,4 +20,4 @@ let flat = (a, depth) => {
 
 // const arr1 = [0, 1, 2, [3, 4, [5, 6]]];
 
-// console.log(flat([1, [2]]))
+// console.log(flat([1, [2, [3]]]))
