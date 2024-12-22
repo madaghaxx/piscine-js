@@ -29,4 +29,4 @@ let split = (str, separator) => {
     return result;
 }
 // console.log(split('ggg - ddd - b', ' - '));
-console.log(null || 'string');
+// console.log(null || 'string');
