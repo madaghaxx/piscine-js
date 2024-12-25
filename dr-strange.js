@@ -20,14 +20,13 @@ let addWeek = (date) => {
 // console.log(addWeek(new Date('0001-01-09'))) // Output: secondTuesday
 
 let timeTravel = (obj) => {
-    let hourstosub = obj.date.getHours()
-    let minutestosub = obj.date.getMinutes()
-    let secondstosub = obj.date.getSeconds()
-    obj.date.setHours(hourstosub - obj.hour)
-    obj.date.setMinutes(minutestosub - obj.minute)
-    obj.date.setSeconds(secondstosub - obj.second)
-
-    console.log(obj.date)
+    // let hourstosub = obj.date.getHours()
+    // let minutestosub = obj.date.getMinutes()
+    // let secondstosub = obj.date.getSeconds()
+    obj.date.setHours(obj.hour)
+    obj.date.setMinutes(obj.minute)
+    obj.date.setSeconds(obj.second)
+    return obj.date
 }
 // timeTravel({
 //     date: new Date('2020-05-29 23:25:22'),
@@ -35,3 +34,22 @@ let timeTravel = (obj) => {
 //     minute: 22,
 //     second: 22,
 // })
+// console.log(
+//     timeTravel({
+//         date: new Date('2020-05-29 23:25:22'),
+//         hour: 21,
+//         minute: 22,
+//         second: 22,
+//     }).toString())
+
+
+// console.log(new Date('2020-05-29 21:22:22').getTime())
+
+   console( timeTravel({
+      date: new Date('2020-05-29 23:25:22'),
+      hour: 21,
+      minute: 22,
+      second: 22,
+    }).getTime(),
+    new Date('2020-05-29 21:22:22').getTime())
+  
