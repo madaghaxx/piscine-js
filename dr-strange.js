@@ -5,6 +5,8 @@ let addWeek = (date) => {
     const day = time / (1000 * 60 * 60 * 24)%14;
     return days[day];
 }
+
+
 let timeTravel = (obj) => {
     obj.date.setHours(obj.hour)
     obj.date.setMinutes(obj.minute)
