@@ -6,3 +6,6 @@ let mapper = (arr, fx) => {
   return res;
 };
 
+let flatMap = (arr, fx) => {
+  return flat(mapper(arr, fx));
+};
