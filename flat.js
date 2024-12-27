@@ -9,4 +9,3 @@ const flat = (arr, num = 1) => {
   }
   return res;
 };
-console.log(flat([1, [2]]));
