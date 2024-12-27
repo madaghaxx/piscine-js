@@ -19,4 +19,4 @@ let funcExec = (arr, func) => {
 };
 
 // console.log(sumOrMul([29, 23, 3, 2, 25]));
-console.log(sumOrMul([1, 2, 3, 5, 8],5));
+// console.log(sumOrMul([1, 2, 3, 5, 8],5));
