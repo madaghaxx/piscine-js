@@ -1,8 +1,8 @@
 export let build = (num) => {
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i <= num; i++) {
     let div = document.createElement("div");
     div.id = "brick-" + i;
-    if (i % 3 === 1) {
+    if (i % 3 === 2) {
       div.setAttribute("data-foundation", "true");
     }
     setTimeout(() => {
