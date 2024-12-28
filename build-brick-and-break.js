@@ -3,7 +3,7 @@ export let build = (num) => {
     let div = document.createElement("div");
     div.id = "brick-" + i;
     if (i % 3 === 1) {
-      div.setAttribute("foundation", "true");
+      div.setAttribute("data-foundation", "true");
     }
     setTimeout(() => {
       document.body.append(div);
