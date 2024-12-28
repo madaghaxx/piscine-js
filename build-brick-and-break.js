@@ -13,7 +13,7 @@ export let build = (num) => {
 export let repair = (...num) => {
   num.forEach((el) => {
     let hh = document.getElementById(el);
-    if (hh.getAttribute("foundation") === "true") {
+    if (hh.getAttribute("data-foundation") === "true") {
       hh.setAttribute("data-repaired", "in progress");
     } else {
       hh.setAttribute("data-repaired", "true");
