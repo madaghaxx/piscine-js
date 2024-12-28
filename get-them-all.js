@@ -2,7 +2,7 @@ export let getArchitects = () => {
   let res = [];
   let res2 = [];
   let arr1 = document.getElementsByTagName("a");
-  let arr2 = document.getElementsByTagName(":not(a)");
+  let arr2 = document.querySelectorAll(":not(a)");
   for (let i = 0; i < arr1.length; i++) {
     res.push(arr1[i]);
   }
@@ -16,7 +16,7 @@ export let getClassical = () => {
   let res = [];
   let res2 = [];
   let arr1 = document.getElementsByClassName("classical");
-  let arr2 = document.getElementsByClassName(":not(classical)");
+  let arr2 = document.querySelectorAll(":not(.classical)");
   for (let i = 0; i < arr1.length; i++) {
     res.push(arr1[i]);
   }
@@ -30,7 +30,7 @@ export let getActive = () => {
   let res = [];
   let res2 = [];
   let arr1 = document.getElementsByClassName("classical.active");
-  let arr2 = document.getElementsByClassName(":not(classical.active)");
+  let arr2 = document.querySelectorAll(":not(.classical.active)");
   for (let i = 0; i < arr1.length; i++) {
     res.push(arr1[i]);
   }
@@ -42,7 +42,7 @@ export let getActive = () => {
 
 export let getBonannoPisano = () => {
   let arr1 = document.getElementById("BonannoPisano");
-  let arr2 = document.querySelectorAll(":not(BonannoPisano)");
+  let arr2 = document.querySelectorAll(":not(#BonannoPisano)");
 
   return [arr1, arr2];
 };
