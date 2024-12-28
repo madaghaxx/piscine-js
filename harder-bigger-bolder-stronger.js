@@ -9,7 +9,7 @@ export let generateLetters = () => {
     if (i < 40) {
       div.style.fontWeight = 300;
     }
-    if (i > 40 && i < 80) {
+    if (i > 40 && i <= 80) {
       div.style.fontWeight = 400;
     }
     if (i > 80) {
