@@ -14,11 +14,11 @@ export let pimp = () => {
       btn.classList.toggle("unpimp");
     }
   } else if (btn.classList.contains("unpimp")) {
+    btn.classList.remove(styles[num]);
     if (num === 0) {
       btn.classList.toggle("unpimp");
     } else {
       num -= 1;
-      btn.classList.remove(styles[num]);
     }
   }
 };
