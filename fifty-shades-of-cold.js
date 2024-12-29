@@ -1,12 +1,11 @@
 import { colors } from "./fifty-shades-of-cold.data.js";
 export let generateClasses = () => {
   let style = document.createElement("style");
-  for (let i = 0; i < colors.length; i++) {      
+  for (let i = 0; i < colors.length; i++) {
     style.innerHTML += `.${colors[i]} { background: ${colors[i]}; }`;
     // const classes = style;
   }
   document.head.appendChild(style);
-  
 };
 
 export let generateColdShades = () => {
@@ -32,6 +31,6 @@ export let generateColdShades = () => {
 export let choseShade = (hh) => {
   let divs = document.querySelectorAll("div");
   divs.forEach((div) => {
-    div.style.backgroundColor = hh;
+    div.classList = hh;
   });
 };
