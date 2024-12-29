@@ -24,12 +24,9 @@ export let generateColdShades = () => {
     }
   }
 };
-export let choseShade = () => {
-  if (event.target.tagName === "DIV") {
-    let selectedColor = event.target.textContent;
-    let divs = document.querySelectorAll("div");
-    divs.forEach((div) => {
-      div.style.backgroundColor = selectedColor;
-    });
-  }
+export let choseShade = (hh) => {
+  let divs = document.querySelectorAll("div");
+  divs.forEach((div) => {
+    div.style.backgroundColor = hh;
+  });
 };
