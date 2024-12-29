@@ -18,8 +18,8 @@ export let pimp = () => {
       btn.classList.toggle("unpimp");
     } else {
       num -= 1;
+      btn.classList.remove(styles[num]);
     }
-    btn.classList.remove(styles[num]);
   }
 };
 // a === 1 ?? b;
