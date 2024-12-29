@@ -9,7 +9,7 @@ export let compose = () => {
       console.log(n[n.length - 1]);
       //   n[n.length - 2].remove();
       n[n.length - 1].remove();
-    } else if (event.key === " ") {
+    } else if (event.key === "Escape") {
       document.querySelectorAll(".note").forEach((note) => {
         note.remove();
       });
