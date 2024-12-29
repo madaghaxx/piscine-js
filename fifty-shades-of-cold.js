@@ -1,9 +1,13 @@
 import { colors } from "./fifty-shades-of-cold.data.js";
 export let generateClasses = () => {
-  let tag = document.head.appendChild(document.createElement("style"));
-  for (let i = 0; i < colors.length; i++) {
-    tag.sheet.insertRule(`.${colors[i]} { background: ${colors[i]}; }`);
-  }
+  let style = document.createElement("style");
+  document.head.appendChild(style);
+  style.onload = () => {
+    for (let i = 0; i < colors.length; i++) {
+      style.sheet.insertRule(`.${colors[i]} { background: ${colors[i]}; }`);
+      // const classes = style;
+    }
+  };
 };
 
 export let generateColdShades = () => {
@@ -20,6 +24,8 @@ export let generateColdShades = () => {
       let div = document.createElement("div");
       div.innerHTML = colors[i];
       div.className = colors[i];
+      // console.log(div.className);
+
       document.body.appendChild(div);
     }
   }
