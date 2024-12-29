@@ -1,28 +1,25 @@
 import { styles } from "./pimp-my-style.data.js";
+let num = 0;
 export let pimp = () => {
   const btn = document.querySelector("button");
 
+  // console.log(btn.classList.value.split(" "));
   if (
     !btn.classList.contains("unpimp") &&
-    btn.classList.value.split(" ").length >= 1 &&
     btn.classList.value.split(" ").length < 16
   ) {
-    let num = btn.classList.value.split(" ").length - 1;
     btn.classList.add(styles[num]);
-  } else if (btn.classList.value.split(" ").length === 16) {
-    btn.classList.toggle("unpimp");
-  }
-
-  if (btn.classList.value.contains("unpimp")) {
-    {
-      let num = btn.classList.value.split(" ").length - 1;
-      btn.classList.remove(styles[num]);
+    num += 1;
+    if (btn.classList.value.split(" ").length === 16) {
+      btn.classList.toggle("unpimp");
     }
+  } else if (btn.classList.contains("unpimp")) {
+    if (num === 0) {
+      btn.classList.toggle("unpimp");
+    } else {
+      num -= 1;
+    }
+    btn.classList.remove(styles[num]);
   }
 };
-
-
-// helo helo (cap) hhh(cap, 3)
-// helo Helo hhh (cap, 3)
-// Helo Helo Hhh
-hh (cap) (low) 
+// a === 1 ?? b;
