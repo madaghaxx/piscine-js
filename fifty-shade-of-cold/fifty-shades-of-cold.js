@@ -22,8 +22,6 @@ export let generateColdShades = () => {
       let div = document.createElement("div");
       div.innerHTML = colors[i];
       div.className = colors[i];
-      // console.log(div.className);
-
       document.body.appendChild(div);
     }
   }
