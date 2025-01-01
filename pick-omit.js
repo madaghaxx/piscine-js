@@ -21,7 +21,7 @@ let omit = (obj, arr) => {
     }
   } else {
     arr.map((s) => {
-      !obj.s ?? delete obj.s;
+      obj.s ? delete obj.s:0;
       objj[s] = obj[s];
     });
   }
