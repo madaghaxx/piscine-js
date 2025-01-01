@@ -5,7 +5,7 @@ let pick = (obj, arr) => {
       objj[arr] = obj[arr];
     }
   } else {
-    arr.map((s) => {
+    arr.forEach((s) => {
       if (obj.hasOwnProperty(s)) {
         objj[s] = obj[s];
       }
@@ -14,11 +14,15 @@ let pick = (obj, arr) => {
   return objj;
 };
 
+
+
+
+
 let omit = (obj, arr) => {
   if (typeof arr === "string") {
     delete obj[arr];
   } else {
-    arr.map((s) => {
+    arr.forEach((s) => {
       delete obj[s];
     });
   }
