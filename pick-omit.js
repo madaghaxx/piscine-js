@@ -14,16 +14,12 @@ let pick = (obj, arr) => {
 };
 
 let omit = (obj, arr) => {
-  let objj = {};
   if (typeof arr === "string") {
-    if (!obj.hasOwnProperty(arr)) {
-      objj[arr] = obj[arr];
-    }
+    delete obj[arr];
   } else {
     arr.map((s) => {
       delete obj[s];
-      objj = obj;
     });
   }
-  return objj;
+  return obj;
 };
