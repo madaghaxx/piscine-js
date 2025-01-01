@@ -6,8 +6,9 @@ let pick = (obj, arr) => {
     }
   } else {
     arr.map((s) => {
-      obj.s ?? delete obj.s;
-      objj[s] = obj[s];
+      if (obj.hasOwnProperty(s)) {
+        objj[s] = obj[s];
+      }
     });
   }
   return objj;
