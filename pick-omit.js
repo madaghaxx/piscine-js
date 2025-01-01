@@ -12,3 +12,18 @@ let pick = (obj, arr) => {
   }
   return objj;
 };
+
+let omit = (obj, arr) => {
+  let objj = {};
+  if (typeof arr === "string") {
+    if (!obj.hasOwnProperty(arr)) {
+      objj[arr] = obj[arr];
+    }
+  } else {
+    arr.map((s) => {
+      !obj.s ?? delete obj.s;
+      objj[s] = obj[s];
+    });
+  }
+  return objj;
+};
