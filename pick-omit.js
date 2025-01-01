@@ -20,9 +20,9 @@ let omit = (obj, arr) => {
       objj[arr] = obj[arr];
     }
   } else {
-    arr.map((s) => {
-      obj.s ? delete obj.s:0;
-      objj[s] = obj[s];
+      arr.map((s) => {
+          delete obj[arr]
+          objj = obj
     });
   }
   return objj;
