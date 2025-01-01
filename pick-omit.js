@@ -14,10 +14,6 @@ let pick = (obj, arr) => {
   return objj;
 };
 
-
-
-
-
 let omit = (obj, arr) => {
   if (typeof arr === "string") {
     delete obj[arr];
