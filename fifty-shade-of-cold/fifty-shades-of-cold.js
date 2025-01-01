@@ -7,7 +7,6 @@ export let generateClasses = () => {
   }
   document.head.appendChild(style);
 };
-
 export let generateColdShades = () => {
   for (let i = 0; i < colors.length; i++) {
     if (
