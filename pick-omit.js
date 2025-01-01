@@ -15,12 +15,13 @@ let pick = (obj, arr) => {
 };
 
 let omit = (obj, arr) => {
+  let newObj = { ...obj };
   if (typeof arr === "string") {
-    delete obj[arr];
+    delete newObj[arr];
   } else {
     arr.forEach((s) => {
-      delete obj[s];
+      delete newObj[s];
     });
   }
-  return obj;
+  return newObj;
 };
