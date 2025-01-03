@@ -22,7 +22,7 @@ let reduceKeys = (obj, func, init) => {
   let res;
   init ? (res = init) : (res = kk[0]);
   for (let key in obj) {
-    if (key !== kk[0]) {
+    if (res[0] !== kk[0]) {
       res = func(res, key);
     }
   }
@@ -30,4 +30,4 @@ let reduceKeys = (obj, func, init) => {
 };
 
 // const nutrients = { carbohydrates: 12, protein: 20, fat: 5 };
-// console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(", ", cr)));
+// console.log(reduceKeys(nutrients, (acc, cr) => `${acc}${cr}:`, ":"));
