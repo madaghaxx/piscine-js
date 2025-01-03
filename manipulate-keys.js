@@ -17,7 +17,7 @@ let mapKeys = (obj, func) => {
   return res;
 };
 
-let reduceKeys = (obj, func, initial = "") => {
+let reduceKeys = (obj, func, initial) => {
   let res = initial;
   for (let key in obj) {
     // console.log(key);
