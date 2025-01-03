@@ -18,7 +18,7 @@ let fusion = (...objs) => {
         }
       }
       if (Number.isInteger(obj[key])) {
-        if (!res[key]) {
+        if (!res[key] || typeof res[key]!= 'number'){
           res[key] = 0;
         }
         res[key] += obj[key];
@@ -33,3 +33,4 @@ let fusion = (...objs) => {
   });
   return res;
 };
+// console.log(fusion({ a: { b: 1 } }, { a: 1 }));
