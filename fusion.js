@@ -1,7 +1,7 @@
 let fusion = (...objs) => {
   let res = {};
   objs.forEach((obj) => {
-    for (key in obj) {
+    for (let key in obj) {
       if (Array.isArray(obj[key])) {
         if (!res[key]) {
           res[key] = [];
