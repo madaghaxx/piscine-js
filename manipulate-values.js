@@ -10,12 +10,12 @@ let filterValues = (obj, func) => {
 
 let mapValues = (obj, func) => {
   let res = {};
-  for (key in obj) {
+  for (let key in obj) {
     res[key] = func(obj[key]);
   }
   return res;
 };
-let reduceValues = (obj, func, initial=0) => {
+let reduceValues = (obj, func, initial = 0) => {
   let res = initial;
   for (let key in obj) {
     res = func(res, obj[key]);
