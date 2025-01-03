@@ -17,14 +17,17 @@ let mapKeys = (obj, func) => {
   return res;
 };
 
-let reduceKeys = (obj, func, initial) => {
-  let res = initial;
+let reduceKeys = (obj, func) => {
+  let kk = Object.keys(obj);
+  let res = kk[0];
   for (let key in obj) {
-    // console.log(key);
-    res = func(res, key);
+    if (key !== kk[0]) {
+
+      res = func(res, key);
+    }
   }
   return res;
 };
 
-// const nutrients = { carbohydrates: 12, protein: 20, fat: 5 };
-// console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(", ", cr)));
+const nutrients = { carbohydrates: 12, protein: 20, fat: 5 };
+console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(", ", cr)));
