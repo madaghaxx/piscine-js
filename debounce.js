@@ -8,10 +8,10 @@ let debounce = (func, delay) => {
   };
 };
 
-let opDebounce = (func, delay) => {
+let opDebounce = (func, delay, option = {}) => {
   let timer = null;
   return function (...args) {
-    if (timer === null) {
+    if (timer === null && option.leading) {
       func(...args);
     }
     clearTimeout(timer);
