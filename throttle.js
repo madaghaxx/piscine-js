@@ -23,7 +23,7 @@ let opThrottle = (func, delay, option = {}) => {
             clearTimeout(id);
         }
         id = setTimeout(() => {
-            if (option.trailing) {
+            if (option.trailing !== false) {
                 func(...lastArgs);
             }
             leadingCalled = false;
