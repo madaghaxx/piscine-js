@@ -9,18 +9,16 @@ let debounce = (func, delay) => {
 };
 
 let opDebounce = (func, delay, option = {}) => {
-  let timer = null;
+  let timer;
   let called = false;
   return function (...args) {
-    if (timer === null && option.leading && !called) {
+    if (option.leading && !called) {
       func(...args);
       called = true;
     }
     clearTimeout(timer);
     timer = setTimeout(() => {
       func(...args);
-      timer = null;
-      called = false;
     }, delay);
   };
 };
