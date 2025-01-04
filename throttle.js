@@ -12,22 +12,22 @@ const throttle = (func, delay) => {
 const opThrottle = (func, delay, option = {}) => {
   let id;
   let lastArgs;
-  let leadingCalled = false;
+  let leading = false;
   return function (...args) {
     lastArgs = args;
-    if (option.leading && !leadingCalled) {
+    if (option.leading && !leading) {
       func(...args);
-      leadingCalled = true;
+      leading = true;
     }
     if (id) {
       clearTimeout(id);
     }
     id = setTimeout(() => {
-      if (option.trailing !== false) {
+      if (option.trailing) {
         func(...lastArgs);
       }
       id = null;
-      leadingCalled = false;
+      leading = false;
     }, delay);
   };
 };
