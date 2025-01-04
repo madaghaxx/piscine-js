@@ -12,7 +12,7 @@ let opDebounce = (func, delay, option) => {
   let timer = null;
   return function (...args) {
     // let istrue = false;
-    if (timer === nill && option) {
+      if (timer === null && option) {
       func(...args);
       //   istrue = true;
     }
