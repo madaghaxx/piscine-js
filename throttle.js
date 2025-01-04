@@ -24,8 +24,6 @@ const opThrottle = (func, delay, option = {}) => {
     id = setTimeout(() => {
       if (option.trailing) {
         func(...args);
-      } else {
-        func(...args);
       }
     }, delay);
   };
