@@ -11,10 +11,9 @@ const throttle = (func, delay) => {
 
 const opThrottle = (func, delay, option = {}) => {
   let id;
-  let lastArgs;
+
   let leading = false;
   return function (...args) {
-    lastArgs = args;
     if (option.leading && !leading) {
       func(...args);
       leading = true;
@@ -24,10 +23,8 @@ const opThrottle = (func, delay, option = {}) => {
     }
     id = setTimeout(() => {
       if (option.trailing) {
-        func(...lastArgs);
+        func(...args);
       }
-      id = null;
-      leading = false;
     }, delay);
   };
 };
