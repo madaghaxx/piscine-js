@@ -1,11 +1,11 @@
 let debounce = (func, delay) => {
   let id;
-  return function () {
+  return function (...args) {
     if (id) {
       clearTimeout(id);
     }
     id = setTimeout(() => {
-      func();
+      func(...args);
     }, delay);
   };
 };
