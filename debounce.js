@@ -11,10 +11,8 @@ let debounce = (func, delay) => {
 let opDebounce = (func, delay, option) => {
   let timer = null;
   return function (...args) {
-    // let istrue = false;
-      if (timer === null && option) {
+    if (timer === null && option.leading) {
       func(...args);
-      //   istrue = true;
     }
     clearTimeout(id);
     id = setTimeout(() => {
