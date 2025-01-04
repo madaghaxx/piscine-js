@@ -26,6 +26,7 @@ const opThrottle = (func, delay, option = {}) => {
       if (option.trailing !== false) {
         func(...lastArgs);
       }
+      id = null;
       leadingCalled = false;
     }, delay);
   };
