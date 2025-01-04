@@ -1,25 +1,32 @@
 let throttle = (func, delay) => {
-  let id;
+  let lastCall = 0;
   return function (...args) {
-    clearTimeout(id);
-    id = setTimeout(() => {
+    const now = new Date().getTime();
+    if (now - lastCall >= delay) {
+      lastCall = now;
       func(...args);
-    }, delay);
+    }
   };
 };
 
 let opThrottle = (func, delay, option = {}) => {
-  let id;
-  let lastArgs;
-  return function (...args) {
-    lastArgs = args;
-    clearTimeout(id);
-    id = setTimeout(() => {
-      if (option.trailing) {
-        func(...lastArgs);
-      } else {
-        func(...args);
-      }
-    }, delay);
-  };
+    let id;
+    let lastArgs;
+    let leadingCalled = false;
+    return function (...args) {
+        lastArgs = args;
+        if (option.leading && !leadingCalled) {
+            func(...args);
+            leadingCalled = true;
+        }
+        if (id) {
+            clearTimeout(id);
+        }
+        id = setTimeout(() => {
+            if (option.trailing) {
+                func(...lastArgs);
+            }
+            leadingCalled = false;
+        }, delay);
+    };
 };
