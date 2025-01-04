@@ -14,8 +14,8 @@ let opDebounce = (func, delay) => {
     if (timer === null) {
       func(...args);
     }
-    clearTimeout(id);
-    id = setTimeout(() => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
       func(...args);
       timer = null;
     }, delay);
