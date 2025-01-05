@@ -8,24 +8,4 @@ const throttle = (func, delay) => {
     }
   };
 };
-
-const opThrottle = (func, delay, option = {}) => {
-  let id;
-  let leading = false;
-  return function (...args) {
-    if (option.leading && !leading) {
-      func(...args);
-      leading = true;
-    }
-
-      clearTimeout(id);
-
-    id = setTimeout(() => {
-      if (option.trailing) {
-        temp = args
-        func(...args);
-      }
-    }, delay)
-  };
-};
-
+const opThrottle = (func, wait, option = {}) => {};
