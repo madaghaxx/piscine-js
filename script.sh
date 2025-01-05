@@ -4,5 +4,5 @@
 # git config --global credential.helper store
 git add .
 git commit -m "update"
-git push github test
+git push github main
 git push zone01 master
