@@ -10,7 +10,6 @@ const throttle = (func, delay) => {
     }
   };
 };
-
 const opThrottle = (func, wait, option = {}) => {
   let timeout = null;
   let lastCall = 0;
