@@ -8,4 +8,20 @@ const throttle = (func, delay) => {
     }
   };
 };
-const opThrottle = (func, wait, option = {}) => {};
+function opThrottle(func, time, obj = {}) {
+  let reset = true;
+  return function (...arg) {
+    if (reset) {
+      reset = false;
+      if (obj.leading) {
+        func(...arg);
+      }
+      setTimeout(() => {
+        if (!obj.leading) {
+          func(...arg);
+        }
+        reset = true;
+      }, time);
+    }
+  };
+}
