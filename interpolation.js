@@ -1,6 +1,6 @@
 let interpolation = (obj) => {
   let stepdelay = obj.duration / obj.step; //2
-  let stepgap = (obj.end - obj.start) / step;
+  let stepgap = (obj.end - obj.start) / obj.step;
   let xANDy = [];
   for (let i = obj.start; i < obj.end; i += stepgap) {
     let x = i;
