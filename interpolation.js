@@ -15,7 +15,7 @@ let hh = 0;
   time = setInterval(() => {
     obj.callback(xANDy[hh]);
     hh++;
-    if (hh === xANDy.length-1) {
+    if (hh === obj.step) {
       clearInterval(time);
     }
   }, stepdelay);
