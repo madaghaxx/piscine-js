@@ -17,11 +17,11 @@ let timeout = (delay, callback) => {
     let time = Date.now();
     return callback(...args)
       .then((data) => data)
-      .catch((error) => {
+      .catch(() => {
         if (Date.now() - time < delay) {
           return timeout(delay, callback)(...args);
         } else {
-          throw error;
+          throw new Error("timeout");
         }
       });
   };
