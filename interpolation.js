@@ -1,0 +1,15 @@
+let interpolation = (obj) => {
+  let stepdelay = obj.duration / obj.step; //2
+  let stepgap = (obj.end - obj.start) / step;
+  let xANDy = [];
+  for (let i = obj.start; i < obj.end; i += stepgap) {
+    let x = i;
+    let y = stepdelay;
+    xANDy.push([x, y]);
+  }
+  let hh = 0;
+  setTimeout(() => {
+    obj.callback(xANDy[hh]);
+    hh++;
+  }, stepdelay);
+};
