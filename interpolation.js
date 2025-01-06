@@ -4,7 +4,7 @@ let interpolation = (obj) => {
   let xANDy = [];
   let time;
   let hhh = 1
-  for (let i = obj.start; i < obj.end; i += stepgap) {
+  for (let i = obj.start; obj.start > obj.end ? i > obj.end : i < obj.end; i += stepgap) {
       let x = i;
       let y = stepdelay * hhh;
       xANDy.push([x, y]);
