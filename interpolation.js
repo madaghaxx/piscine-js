@@ -9,9 +9,9 @@ let interpolation = (obj) => {
     xANDy.push([x, y]);
   }
   let hh = 0;
+  clearTimeout(time);
   time = setTimeout(() => {
     obj.callback(xANDy[hh]);
     hh++;
   }, stepdelay);
-  clearTimeout(time);
 };
