@@ -21,7 +21,7 @@ let timeout = (delay, callback) => {
         if (Date.now() - time < delay) {
           return timeout(delay, callback)(...args);
         } else {
-          throw new Error("timeout");
+          throw "timeout";
         }
       });
   };
