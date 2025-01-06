@@ -10,11 +10,11 @@ let interpolation = (obj) => {
   }
   let hh = 0;
 
-  time = setTimeout(() => {
+  time = setInterval(() => {
     obj.callback(xANDy[hh]);
     hh++;
     if (hh === xANDy.length) {
-      clearTimeout(time);
+      clearInterval(time);
     }
   }, stepdelay);
 };
