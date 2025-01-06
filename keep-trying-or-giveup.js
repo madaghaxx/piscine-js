@@ -3,7 +3,7 @@ let retry = (count, callback) => {
     return callback(...args)
       .then((data) => data)
       .catch((error) => {
-        if (count == 0) {
+        if (count > 0) {
           return retry(count - 1, callback)(...args);
         } else {
           throw error;
@@ -17,11 +17,11 @@ let timeout = (delay, callback) => {
     let time = Date.now();
     return callback(...args)
       .then((data) => data)
-      .catch(() => {
+      .catch((error) => {
         if (Date.now() - time < delay) {
           return timeout(delay, callback)(...args);
         } else {
-          throw new Error('Timeout exceeded');
+          throw error;
         }
       });
   };
