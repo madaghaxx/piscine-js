@@ -9,9 +9,9 @@ async function main() {
   });
 
   ff.sort((a, b) => {
-    let lastA = a.split("_")[1];
-    let lastB = b.split("_")[1];
-    return lastA.localeCompare(lastB);
+    let A = a.split("_")[1];
+    let B = b.split("_")[1];
+    return A.localeCompare(B);
   });
 
   ff.forEach((ele, i) => {
