@@ -1,13 +1,19 @@
 import { readdir } from "node:fs/promises";
+let test = [
+  "Ubaid_Ballard.json",
+  "Victoria_Chan.json",
+  "Dominika_Mullen.json",
+  "Heath_Denton.json",
+  `HAHA_Hamilton.json`,
+];
 let arg = process.argv[2];
 let files = await readdir(arg);
-for (let i = 0; i < files.length; i++) {
-  const sortedName = files[i]
-    .split(".")[0]
-    .split("_")
-    .sort((a, b) => {
-      return a[0].localeCompare(b[0]);
-    })
-    .join(" ");
-  console.log(`${i + 1}. ${sortedName}`);
+// console.log(files);
+let data = files.sort((a, b) => {
+  let A = a.split("_")[0];
+  let B = b.split("_")[0];
+  return A.localeCompare(B);
+});
+for (let i = 1; i <= files.length; i++) {
+    console.log(i, data[i - 1]);
 }
