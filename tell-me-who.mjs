@@ -1,14 +1,26 @@
 import { readdir } from "node:fs/promises";
-let arg = process.argv[2];
-let files = await readdir(arg);
 
-let ff = files.map((file) => {
-  return file.split(".")[0];
-});
-ff.forEach((ele, i) => {
-  let test = ele.split("_");
-  let first = test[0];
-  let last = test[1];
+async function main() {
+  let arg = process.argv[2];
+  let files = await readdir(arg);
 
-  console.log(`${i + 1}. ${[last, first].join(" ")}`);
-});
+  let ff = files.map((file) => {
+    return file.split(".")[0];
+  });
+
+  ff.sort((a, b) => {
+    let lastA = a.split("_")[1];
+    let lastB = b.split("_")[1];
+    return lastA.localeCompare(lastB);
+  });
+
+  ff.forEach((ele, i) => {
+    let test = ele.split("_");
+    let first = test[0];
+    let last = test[1];
+
+    console.log(`${i + 1}. ${[last, first].join(" ")}`);
+  });
+}
+
+main();
