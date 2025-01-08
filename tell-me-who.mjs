@@ -6,7 +6,7 @@ for (let i = 0; i < files.length; i++) {
     .split(".")[0]
     .split("_")
     .sort((a, b) => {
-      return a.localeCompare(b);
+      return a[0].localeCompare(b[0]);
     })
     .join(" ");
   console.log(`${i + 1}. ${sortedName}`);
