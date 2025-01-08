@@ -9,7 +9,7 @@ let temp = "";
 arg.split(" ").forEach((i) => {
   temp += revstr(i) + " ";
 });
-fs.writeFile("verydisco-forever.txt", temp, (err) => {
+fs.writeFile("verydisco-forever.txt", temp.trim(), (err) => {
   if (err) {
     console.error(err);
     return;
