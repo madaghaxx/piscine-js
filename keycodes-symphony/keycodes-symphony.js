@@ -7,7 +7,6 @@ export let compose = () => {
     ) {
       let n = document.querySelectorAll(".note");
       console.log(n[n.length - 1]);
-      //   n[n.length - 2].remove();
       n[n.length - 1].remove();
     } else if (event.key === "Escape") {
       document.querySelectorAll(".note").forEach((note) => {
@@ -21,7 +20,6 @@ export let compose = () => {
       let ra2 = Math.floor(Math.random() * 255);
       let ra3 = Math.floor(Math.random() * 255);
       res.style.backgroundColor = `rgb(${ra}, ${ra2}, ${ra3})`;
-
       document.body.appendChild(res);
     }
   });
