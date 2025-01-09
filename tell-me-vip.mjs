@@ -21,6 +21,8 @@ for (let i = 0; i < files.length; i++) {
 
 vipList.sort((a, b) => a.lastname.localeCompare(b.lastname));
 
-let text = vipList.map((vip, index) => `${index + 1}. ${vip.lastname} ${vip.name}`).join("\n");
+let text = vipList
+  .map((vip, index) => `${index + 1}. ${vip.lastname} ${vip.name}`)
+  .join("\n");
 
 await fs.writeFile("vip.txt", text);
