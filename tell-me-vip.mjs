@@ -1,9 +1,10 @@
 import fs from "fs/promises";
 import { join } from "path";
+
 let arg = process.argv[2];
 let files = await fs.readdir(arg);
 
-let text = "";
+let vipList = [];
 for (let i = 0; i < files.length; i++) {
   if (files[i].endsWith(".json")) {
     let filePath = join(arg, files[i]);
@@ -13,13 +14,13 @@ for (let i = 0; i < files.length; i++) {
       let names = files[i].split(".")[0];
       let name = names.split("_")[0];
       let lastname = names.split("_")[1];
-      text += `${i + 1}. ${[lastname, name].join(" ")}`+'\n'
+      vipList.push({ lastname, name });
     }
   }
 }
-fs.writeFile("vip.txt", text, (err) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-});
+
+vipList.sort((a, b) => a.lastname.localeCompare(b.lastname));
+
+let text = vipList.map((vip, index) => `${index + 1}. ${vip.lastname} ${vip.name}`).join("\n");
+
+await fs.writeFile("vip.txt", text);
