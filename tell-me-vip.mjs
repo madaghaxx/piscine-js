@@ -13,7 +13,7 @@ for (let i = 0; i < files.length; i++) {
       let names = files[i].split(".")[0];
       let name = names.split("_")[0];
       let lastname = names.split("_")[1];
-      text += `${i + 1}. ${[lastname, name].join(" ")}`+'\n'
+      text += `${i + 1}. ${[lastname, name].join(" ")}`
     }
   }
 }
