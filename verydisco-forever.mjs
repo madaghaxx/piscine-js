@@ -14,4 +14,4 @@ fs.writeFile("verydisco-forever.txt", temp.trim(), (err) => {
     console.error(err);
     return;
   }
-});
+})
