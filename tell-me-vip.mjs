@@ -5,7 +5,7 @@ let files = await fs.readdir(arg);
 let vipList = [];
 for (let i = 0; i < files.length; i++) {
   if (files[i].endsWith(".json")) {
-    let filePath = arg+files[i]
+    let filePath = join(arg, files[i]);
     let data = await fs.readFile(filePath, "utf8");
     let ff = JSON.parse(data);
     if (Object.values(ff)[0] == "yes") {
