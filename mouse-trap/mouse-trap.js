@@ -25,6 +25,7 @@ export let setBox = () => {
   let box = document.createElement("div");
 
   box.classList.add("box");
+  // box.style.background = "var(--purple)";
   document.body.append(box);
   addEventListener("mousemove", (e) => {
     let circle = document.querySelectorAll(".circle");
