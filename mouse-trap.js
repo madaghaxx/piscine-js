@@ -37,9 +37,9 @@ export let setBox = () => {
         e.clientY > boxPosition.top + 25 &&
         e.clientY < boxPosition.bottom - 25
       ) {
-        last.style.background = "purple";
+        last.style.background = "var(--purple)";
       }
-      if (last.style.background == "purple") {
+      if (last.style.background == "var(--purple)") {
         if (e.clientX < boxPosition.left) {
           last.style.left = boxPosition.left + "px";
         }
