@@ -40,16 +40,16 @@ export let setBox = () => {
         last.style.background = "var(--purple)";
       }
       if (last.style.background == "var(--purple)") {
-        if (e.clientX < boxPosition.left) {
+        if (e.clientX < boxPosition.left + 25) {
           last.style.left = boxPosition.left + "px";
         }
-        if (e.clientX > boxPosition.right) {
+        if (e.clientX > boxPosition.right - 25) {
           last.style.left = boxPosition.right - 50 + "px";
         }
-        if (e.clientY < boxPosition.top) {
+        if (e.clientY < boxPosition.top + 25) {
           last.style.top = boxPosition.top + "px";
         }
-        if (e.clientY > boxPosition.bottom) {
+        if (e.clientY > boxPosition.bottom - 25) {
           last.style.top = boxPosition.bottom - 50 + "px";
         }
       }
