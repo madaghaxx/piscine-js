@@ -32,10 +32,10 @@ export let setBox = () => {
     if (circle.length > 0) {
       let last = circle[circle.length - 1];
       if (
-        e.clientX > boxPosition.left + 26 &&
-        e.clientX < boxPosition.right - 26 &&
-        e.clientY > boxPosition.top + 26 &&
-        e.clientY < boxPosition.bottom - 26
+        e.clientX > boxPosition.left + 25 &&
+        e.clientX < boxPosition.right - 25 &&
+        e.clientY > boxPosition.top + 25 &&
+        e.clientY < boxPosition.bottom - 25
       ) {
         last.style.background = "purple";
       }
