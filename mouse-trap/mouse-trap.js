@@ -10,7 +10,7 @@ export let createCircle = () => {
   });
 };
 export let moveCircle = () => {
-  addEventListener("mousemove", (e) => {
+  document.body.addEventListener("mousemove", (e) => {
     let circle = document.querySelectorAll(".circle");
 
     if (circle.length > 0) {
@@ -38,6 +38,20 @@ export let setBox = () => {
         e.clientY < boxPosition.bottom - 26
       ) {
         last.style.background = "purple";
+      }
+      if (last.style.background == "purple") {
+        if (e.clientX < boxPosition.left) {
+          last.style.left = boxPosition.left + "px";
+        }
+        if (e.clientX > boxPosition.right) {
+          last.style.left = boxPosition.right - 50 + "px";
+        }
+        if (e.clientY < boxPosition.top) {
+          last.style.top = boxPosition.top + "px";
+        }
+        if (e.clientY > boxPosition.bottom) {
+          last.style.top = boxPosition.bottom - 50 + "px";
+        }
       }
     }
   });
