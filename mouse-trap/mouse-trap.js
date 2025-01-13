@@ -38,7 +38,6 @@ export let setBox = () => {
         e.clientY < boxPosition.bottom - 26
       ) {
         last.style.background = "purple";
-        removeEventListener("mousemove");
       }
     }
   });
