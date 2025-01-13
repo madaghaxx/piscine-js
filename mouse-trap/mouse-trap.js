@@ -40,18 +40,29 @@ export let setBox = () => {
         last.style.background = "var(--purple)";
       }
       if (last.style.background == "var(--purple)") {
-        if (e.clientX < boxPosition.left + 25) {
-          last.style.left = boxPosition.left + "px";
+        switch (e) {
+          case e.clientX < boxPosition.left + 25:
+            last.style.left = boxPosition.left + "px";
+          case e.clientX > boxPosition.right - 25:
+            last.style.left = boxPosition.right - 50 + "px";
+          case e.clientY < boxPosition.top + 25:
+            last.style.top = boxPosition.top + "px";
+          case e.clientY > boxPosition.bottom - 25:
+            last.style.top = boxPosition.bottom - 50 + "px";
+            break;
         }
-        if (e.clientX > boxPosition.right - 25) {
-          last.style.left = boxPosition.right - 50 + "px";
-        }
-        if (e.clientY < boxPosition.top + 25) {
-          last.style.top = boxPosition.top + "px";
-        }
-        if (e.clientY > boxPosition.bottom - 25) {
-          last.style.top = boxPosition.bottom - 50 + "px";
-        }
+        // if (e.clientX < boxPosition.left + 25) {
+        //   last.style.left = boxPosition.left + "px";
+        // }
+        // if (e.clientX > boxPosition.right - 25) {
+        //   last.style.left = boxPosition.right - 50 + "px";
+        // }
+        // if (e.clientY < boxPosition.top + 25) {
+        //   last.style.top = boxPosition.top + "px";
+        // }
+        // if (e.clientY > boxPosition.bottom - 25) {
+        //   last.style.top = boxPosition.bottom - 50 + "px";
+        // }
       }
     }
   });
