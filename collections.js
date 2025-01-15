@@ -37,11 +37,3 @@ let strToObj = (str) => {
   let arr = str.split("");
   return arrToObj(arr);
 };
-console.log(
-  mapToObj(
-    new Map([
-      ["ggggg", "ctx"],
-      ["a", 2],
-    ])
-  )
-);
