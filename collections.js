@@ -37,3 +37,10 @@ let strToObj = (str) => {
   let arr = str.split("");
   return arrToObj(arr);
 };
+let superTypeOf = (ele) => {
+  if (Array.isArray(ele)) return "Array";
+  if (ele instanceof Set) return "Set";
+  if (ele instanceof Map) return "Map";
+  if (ele === null) return "null";
+  return typeof ele;
+}
