@@ -11,7 +11,7 @@ let arrToSet = (arr = []) => {
 let arrToStr = (arr) => arr.join("");
 let setToArr = (set) => Array.from(set);
 let setToStr = (set) => arrToStr(setToArr(set));
-let strToArr = (str) => str.split(" ");
+let strToArr = (str) => str.split("");
 let strToSet = (str) => strToArr(arrToSet(str));
 let mapToObj = (map) => {
   let obj = {};
