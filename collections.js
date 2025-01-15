@@ -1,11 +1,11 @@
 let arrToSet = (arr = []) => {
-  let res = [];
-  arr.forEach((ele) => {
-    if (!res.includes(ele)) {
-      res.push(ele);
-    }
-  });
-  return res;
+  // let res = new Set()
+  // arr.forEach((ele) => {
+  //   if (!res.includes(ele)) {
+  //     res.push(ele);
+  //   }
+  // });
+  return new Set(arr)
 };
 
 let arrToStr = (arr) => arr.join("");
