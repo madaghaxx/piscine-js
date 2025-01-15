@@ -1,18 +1,12 @@
 let arrToSet = (arr = []) => {
-  // let res = new Set()
-  // arr.forEach((ele) => {
-  //   if (!res.includes(ele)) {
-  //     res.push(ele);
-  //   }
-  // });
-  return new Set(arr)
+  return new Set(arr);
 };
 
 let arrToStr = (arr) => arr.join("");
 let setToArr = (set) => Array.from(set);
 let setToStr = (set) => arrToStr(setToArr(set));
 let strToArr = (str) => str.split("");
-let strToSet = (str) => strToArr(arrToSet(str));
+let strToSet = (str) => arrToSet(strToArr(str));
 let mapToObj = (map) => {
   let obj = {};
   let i = 0;
