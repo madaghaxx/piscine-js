@@ -43,8 +43,8 @@ let superTypeOf = (ele) => {
   if (ele instanceof Map) return "Map";
   if (ele === null) return "null";
   if (ele instanceof Object) return "Object";
-  if (typeof ele == "string") return "String"
-  if (typeof ele == "number") return "Number"
-  if (ele instanceof function)return 'Function'
+  if (typeof ele == "string") return "String";
+  if (typeof ele == "number") return "Number";
+  if (ele instanceof Function) return "Function";
   return typeof ele;
 };
