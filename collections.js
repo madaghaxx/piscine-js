@@ -42,9 +42,9 @@ let superTypeOf = (ele) => {
   if (ele instanceof Set) return "Set";
   if (ele instanceof Map) return "Map";
   if (ele === null) return "null";
-  if (ele instanceof Object) return "Object";
+  if (ele instanceof Function) return "Function";
   if (typeof ele == "string") return "String";
   if (typeof ele == "number") return "Number";
-  if (ele instanceof Function) return "Function";
+  if (ele instanceof Object) return "Object";
   return typeof ele;
 };
